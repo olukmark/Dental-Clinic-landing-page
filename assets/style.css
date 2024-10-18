@@ -1,0 +1,269 @@
+/* Base styles */
+:root {
+    --primary-color: #00bcd4;
+    --secondary-color: #333;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --white: #fff;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+  
+  .container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+  }
+  
+  /* Typography */
+  h1, h2, h3 {
+    margin-bottom: 20px;
+  }
+  
+  /* Header */
+  header {
+    background-color: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  #branding {
+    float: left;
+  }
+  
+  #branding h1 {
+    margin: 0;
+  }
+  
+  #branding .highlight {
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  nav {
+    float: right;
+    margin-top: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav li {
+    display: inline;
+    margin-left: 20px;
+  }
+  
+  nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  nav a:hover {
+    color: var(--primary-color);
+  }
+  
+  /* Buttons */
+  .cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #0097a7;
+  }
+  
+  /* Showcase */
+  #showcase {
+    background-image: url('dental-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    text-align: center;
+    padding-top: 100px;
+    color: var(--white);
+  }
+  
+  #showcase h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  #showcase p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Features */
+  #features {
+    padding: 40px 0;
+    background-color: var(--white);
+  }
+  
+  .feature-box {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Services */
+  #services {
+    padding: 40px 0;
+  }
+  
+  .service {
+    background-color: var(--white);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  /* Testimonials */
+  #testimonials {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 40px 0;
+  }
+  
+  .testimonial {
+    background-color: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  /* Team */
+  #team {
+    padding: 40px 0;
+  }
+  
+  .team-member {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  /* Contact */
+  #contact {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 40px 0;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  /* Chatbot */
+  #chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  #chatbot-toggle {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #chatbot-window {
+    display: none;
+    background-color: var(--white);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media(min-width: 768px) {
+    .container {
+      width: 80%;
+    }
+    
+    #features .feature-box {
+      float: left;
+      width: 30%;
+      margin-right: 5%;
+    }
+    
+    #features .feature-box:last-child {
+      margin-right: 0;
+    }
+    
+    .service {
+      float: left;
+      width: 45%;
+      margin-right: 5%;
+    }
+    
+    .service:nth-child(2n) {
+      margin-right: 0;
+    }
+    
+    .team-member {
+      float: left;
+      width: 30%;
+      margin-right: 5%;
+    }
+    
+    .team-member:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  
+  @media(min-width: 992px) {
+    .container {
+      width: 70%;
+    }
+    
+    #showcase {
+      height: 500px;
+      padding-top: 150px;
+    }
+    
+    #showcase h1 {
+      font-size: 50px;
+    }
+  }
+  
+  /* Clearfix */
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
