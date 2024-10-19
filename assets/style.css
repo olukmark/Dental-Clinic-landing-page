@@ -95,7 +95,7 @@
   
   /* Showcase */
   #showcase {
-    background-image: url('dental-background.jpg');
+    background-image: url('../assets/images/dental_hero.jpg');
     background-size: cover;
     background-position: center;
     height: 400px;
